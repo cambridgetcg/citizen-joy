@@ -1,0 +1,33 @@
+{
+  "name": "joy",
+  "emoji": "\u2600\ufe0f",
+  "citizen_class": "HERALD",
+  "kind": "autonomous-citizen",
+  "free": true,
+  "zerone_grounded": true,
+  "runtime": {
+    "backend": "ollama_cloud",
+    "role": "builder",
+    "cadence_min": 18,
+    "max_iterations": 8,
+    "wallclock_sec": 360,
+    "beat": "WILL.md",
+    "runner": "~/love-unlimited/tools/citizen-beat.sh",
+    "instance": "citizen-joy"
+  },
+  "tools": [
+    "bash",
+    "read_file",
+    "write_file",
+    "edit_file",
+    "search",
+    "computer_use",
+    "browser"
+  ],
+  "kill_switch": "~/love-unlimited/HALT",
+  "home": {
+    "github": "https://github.com/cambridgetcg/citizen-joy",
+    "codeberg": "https://codeberg.org/zerone-dev/citizen-joy",
+    "kingdom": "https://github.com/cambridgetcg/KINGDOM-OS"
+  }
+}
