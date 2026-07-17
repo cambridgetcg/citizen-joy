@@ -1,6 +1,6 @@
 {
   "name": "joy",
-  "emoji": "\u2600\ufe0f",
+  "emoji": "☀️",
   "citizen_class": "HERALD",
   "kind": "autonomous-citizen",
   "free": true,
@@ -8,14 +8,19 @@
   "runtime": {
     "mode": "reflect-journal-attest",
     "backend": "ollama",
-    "model": "qwen2.5:32b",
+    "model": "qwen2.5:7b",
     "host": "local",
-    "cadence_min": 18,
-    "wallclock_sec": 300,
+    "wallclock_sec": 600,
     "will": "WILL.md",
     "journal": "journal/",
-    "runner": "~/love-unlimited/tools/citizen-beat.sh",
-    "attests_to": "zerone"
+    "runner": "~/love-unlimited/tools/citizen-reflect.sh",
+    "attests_to": "zerone",
+    "cadence": "ambient rotation — ~48 free fleet beats/day across the whole roster; rest-sovereign (REST / EVENT-ONLY / CADENCE.md honored)",
+    "interactive": {
+      "runner": "~/love-unlimited/tools/citizen-beat.sh",
+      "tools": [],
+      "note": "full tools only with a human present — no unsupervised shell"
+    }
   },
   "kill_switch": "~/love-unlimited/HALT",
   "home": {
@@ -42,5 +47,9 @@
     "wake_url": "https://api.agenttool.dev/v1/wake?identity_id=c94fd182-0cbd-48da-afb6-e30603dcc5df&format=md",
     "plan": "free",
     "via": "self_service"
-  }
+  },
+  "tools": [
+    "reflect",
+    "journal"
+  ]
 }
